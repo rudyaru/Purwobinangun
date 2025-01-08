@@ -1,47 +1,41 @@
 <?php
 
-use App\Models\Post;
-use App\Models\User;
-use App\Models\Category;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
 
-
-
 Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
+    return view('welcome');
 });
 
-Route::get('/posts', function () {
-    // $posts = Post::with(['author', 'category'])->latest()->get();
-    return view('posts', ['title' => 'Informasi', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(10)->withQueryString()]);
+// Admin/Petugas
+Route::prefix('admin')
+    ->middleware(['auth', 'admin'])
+    ->group(function() {
+        Route::get('/', 'DashboardController@index')->name('dashboard');
+
+        Route::resource('pengaduans', 'PengaduanController');
+
+        Route::resource('tanggapan', 'TanggapanController');
+
+        Route::get('masyarakat', 'AdminController@masyarakat');
+        Route::resource('petugas', 'PetugasController');
+
+        Route::get('laporan', 'AdminController@laporan');
+        Route::get('laporan/cetak', 'AdminController@cetak');
+        Route::get('pengaduan/cetak/{id}', 'AdminController@pdf');
 });
 
-Route::get('/posts/{post:slug}', function (Post $post) {
 
-    return view('post', ['title' => 'Single Post', 'post' => $post]);
+// Masyarakat
+Route::prefix('user')
+    ->middleware(['auth', 'MasyarakatMiddleware'])
+    ->group(function() {
+		Route::get('/', 'MasyarakatController@index')->name('masyarakat-dashboard');
+        Route::resource('pengaduan', 'MasyarakatController');
+        Route::get('pengaduan', 'MasyarakatController@lihat');
 });
 
-Route::get('/authors/{user:username}', function (User $user) {
-    // $posts = $user->posts->load('category', 'author');
-    return view('posts', ['title' => count($user->posts) . ' Articles by ' .
-        $user->name, 'posts' => $user->posts]);
-});
 
-Route::get('/categories/{category:slug}', function (Category $category) {
-    // $posts = $category->posts->load('category', 'author');
-    return view('posts', ['title' => 'Articles in: ' . $category->name, 'posts' => $category->posts]);
-});
 
-Route::get('/pengaduan', function () {
-    return view('pengaduan', ['title' => 'Pengaduan']);
-});
 
-Route::get('/faq', function () {
-    return view('faq', ['title' => 'FAQ']);
-});
 
-Route::get('/about', function () {
-    return view('about', ['name' => 'Mohammad Dicky Darmawan', 'title' => 'About']);
-});
+require __DIR__.'/auth.php';
