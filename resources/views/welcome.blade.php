@@ -73,8 +73,8 @@
             </p>
             <ul>
               <h3>Tujuan Lima Sisi</h3>
-              <li><i class="ri-check-double-line"></i>Memberikan pengaduan terkait suatu masalah yang dialami warga dengan jelas kepada petugas kalurahan supaya bisa ditindak lebih lanjut</li>
-              <li><i class="ri-check-double-line"></i>Mempermudah masyarakat untuk berkomunikasi dengan pihak Kalurahan</li>
+              <li><i class="ri-check-double-line"></i>Memberikan pengaduan terkait suatu masalah yang dialami warga dengan jelas kepada petugas kalurahan supaya bisa ditindak lebih lanjut.</li>
+              <li><i class="ri-check-double-line"></i>Mempermudah masyarakat untuk berkomunikasi dengan pihak Kalurahan.</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
@@ -140,7 +140,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>TATA CARA</h2>
-          <p>Nah ini dia alur pelaporan yang ada website</p>
+          <p>Nah ini dia alur pelaporan yang ada di website</p>
         </div>
 
         <div class="row">
@@ -179,7 +179,8 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
+    <!-- End Services Section -->
 
 
     @include('includes.landing.footer')
