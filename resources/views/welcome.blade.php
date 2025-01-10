@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>APLIKASi | Laporan Masyarakat</title>
+  <title>5 Sisi | Laporan Masyarakat</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -39,8 +39,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">Layanan Laporan Masyarakat Berbasis Online</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">Sampaikan laporan masalah Anda di sini, kami akan memprosesnya dengan cepat , aman dan nyaman.</h2>
+          <h1 data-aos="fade-up">Ruang Layanan Informasi Kamituwo Kalurahan Purwobinangun</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Sampaikan laporan masalah Anda di sini, kami akan memprosesnya dengan cepat, aman dan nyaman.</h2>
           <div data-aos="fade-up" data-aos-delay="800">
             <a href="{{ url('login')}}" class="btn-get-started scrollto">Laporkan!</a>
            
@@ -69,19 +69,20 @@
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
             <p>
-              <h3>LimaSisi</h3> adalah sistem laporan pengaduan Masyarakat yang dibuat untuk memudahkan Masyarakat untuk memberikan laporan atau informasi kepada pihak Kamituwo Desa Purwobinangun
+              <h3>Lima Sisi</h3> adalah sistem laporan pengaduan Masyarakat yang dibuat untuk memudahkan Masyarakat untuk memberikan pengaduan terkait permasalahan yang dialami warga setempat kepada petugas kalurahan.
             </p>
             <ul>
-              <h3>Tujuan LimaSisi</h3>
-              <li><i class="ri-check-double-line"></i>Memberikan Informasi atau laporan yang jelas kepada masyarakat supaya bisa ditindak lebih lanjut</li>
+              <h3>Tujuan Lima Sisi</h3>
+              <li><i class="ri-check-double-line"></i>Memberikan pengaduan terkait suatu masalah yang dialami warga dengan jelas kepada petugas kalurahan supaya bisa ditindak lebih lanjut</li>
               <li><i class="ri-check-double-line"></i>Mempermudah masyarakat untuk berkomunikasi dengan pihak Kalurahan</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <p>
-              <h4>LimaSisi</h4>merupakan komitmen  kami untuk melayani Masyarakat. Dengan hadirnya sistem pelaporan pengaduan online ini, diharapkan setiap suara masyarakat bisa didengar dan ditindaklanjuti oleh pihak Kalurahan.
+              {{-- <h4>LimaSisi</h4>merupakan komitmen  kami untuk melayani Masyarakat. Dengan hadirnya sistem pelaporan pengaduan online ini, diharapkan setiap suara masyarakat bisa didengar dan ditindaklanjuti oleh pihak Kalurahan. --}}
+              <h4>Harapan Kami</h4>kami berharap dari hasil pekerjaan kami ini dapat sedikit membantu masyarakat di daerah Purwobinangun.
             </p>
-            <a href="#services" class="btn-learn-more">Tata cara atau alur pengaduan</a>
+            <a href="#services" class="btn-learn-more">Tata Cara atau Alur Pengaduan</a>
           </div>
         </div>
 

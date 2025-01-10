@@ -3,7 +3,8 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1> <a href="index.html"><img src="assets/img/logo.svg"class="img-fluid"><a href="#">APLIKASIKU</a></h1>
+        <h1> <a><img src="assets/img/logo.png"class="img-fluid"><a>LAYANAN KAMITUWO</a></h1>
+        <!-- href="index.html" href="#"-->
         <!-- Uncomment below if you prefer to use an image logo -->
        
       </div>
