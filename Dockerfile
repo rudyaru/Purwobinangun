@@ -12,6 +12,10 @@ COPY . .
 
 RUN composer install --optimize-autoloader --no-dev
 
+RUN chmod -R 775 storage bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache
+
+
 RUN chown -R www-data:www-data /var/www && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
 ENV APP_ENV=production
