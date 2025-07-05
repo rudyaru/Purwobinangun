@@ -17,6 +17,7 @@ class CreatePetugasTable extends Migration
             $table->id('id_petugas');
             $table->string('nama_petugas', 35);
             $table->string('username', 25)->unique();
+            $table->string('email')->unique();
             $table->string('password');
             $table->string('telp', 13);
             $table->enum('level', [

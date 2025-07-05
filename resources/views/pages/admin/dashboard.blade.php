@@ -99,7 +99,7 @@ Dashboard
         </div>
         <div>
           <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-            Jumlah User
+            Jumlah Masyarakat
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
             {{ $user }}
@@ -107,7 +107,7 @@ Dashboard
         </div>
       </div>
       <!-- Card -->
-      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+      {{-- <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
         <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
           <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
             <path
@@ -122,7 +122,7 @@ Dashboard
             {{ $petugas }}
           </p>
         </div>
-      </div>
+      </div> --}}
       <!-- Card -->
       <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
         <div class="p-3 mr-4 text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700
@@ -133,7 +133,7 @@ Dashboard
         </div>
         <div>
           <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-            Jumlah Admin
+            Jumlah Petugas
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
             {{ $admin }}

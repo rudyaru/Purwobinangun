@@ -55,8 +55,8 @@ class PetugasController extends Controller
     {
         $request->validate([
             'nik' => 'required|string|max:16|unique:users',
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'name' => 'required|string|max:50',
+            'email' => 'required|string|email|max:50|unique:users',
             'phone' => 'required|string|max:15',
             'password' => 'required|string|confirmed|min:8',
         ]);

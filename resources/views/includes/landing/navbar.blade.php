@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1> <a><img src="assets/img/logo.png"class="img-fluid"><a>LAYANAN KAMITUWO</a></h1>
+        <h1> <a><img src="assets/img/OIP.jpeg" class="img-fluid" width="50" height="50"><a>  PENGADUAN KAMITUWO</a></h1>
         <!-- href="index.html" href="#"-->
         <!-- Uncomment below if you prefer to use an image logo -->
        

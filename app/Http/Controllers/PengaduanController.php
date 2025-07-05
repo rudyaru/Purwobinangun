@@ -55,7 +55,7 @@ class PengaduanController extends Controller
     public function show($id)
     {
         $item = Pengaduan::with([
-            'details', 'user'
+            'details', 'user', 'tanggapan'
         ])->findOrFail($id);
 
         $tangap = Tanggapan::where('pengaduan_id',$id)->first();

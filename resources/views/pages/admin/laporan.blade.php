@@ -7,12 +7,15 @@ Laporan
 @section('content')
 <main class="h-full pb-16 overflow-y-auto">
   <div class="container grid px-6 mx-auto">
-    <div class="my-6 mb-6">
+    {{-- <div class="my-6 mb-6">
       <a href="{{ url('admin/laporan/cetak')}} "
         class="px-5 py-3  font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
         Export ke PDF
       </a>
-    </div>
+    </div> --}}
+    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+      Data Laporan
+    </h2>
     <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
       <div class="w-full overflow-x-auto">
         @if ($errors->any())

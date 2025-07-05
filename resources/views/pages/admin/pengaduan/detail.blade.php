@@ -59,21 +59,34 @@ Detail Pengaduan
 
           <div class="text-center flex-1">
             <h1 class="mb-8 font-semibold">Tanggapan</h1>
-            <p class="text-gray-800 dark:text-gray-400">
+            {{-- <p class="text-gray-800 dark:text-gray-400">
               @if (empty($tangap->tanggapan))
               Belum ada tanggapan
               @else
               {{ $tangap->tanggapan}}
               @endif
+            </p> --}}
+            <p class="text-gray-800 dark:text-gray-400">
+              @if ($item->tanggapan->isEmpty())
+              Belum ada tanggapan
+              @else
+              @foreach ($item->tanggapan as $t)
+              <div class="mb-4">
+                <p>{{ $t->tanggapan }}</p>
+                <small class="text-sm text-gray-500">{{ $t->created_at->format('d M Y H:i') }}</small>
+              </div>
+              @endforeach
+              @endif
             </p>
+
           </div>
         </div>
       </div>
       <div class="flex justify-center my-4">
-        <a href="{{ url('admin/pengaduan/cetak', $item->id)}}"
+        {{-- <a href="{{ url('admin/pengaduan/cetak', $item->id)}}"
           class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
           Export ke PDF
-        </a>
+        </a> --}}
       </div>
       <div class="flex justify-center my-6">
         <a href="{{ route('tanggapan.show', $item->id)}}"

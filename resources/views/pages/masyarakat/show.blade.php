@@ -18,9 +18,9 @@ Dashboard
         <div
           class="text-gray-800 text-sm font-semibold px-4 py-4 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-400 ">
 
-          <h2>Nama : {{ $ite->name }}</h2>
+          <!-- <h2>Nama : {{ $ite->name }}</h2>
           <h2 class="mt-4">NIK : {{ $ite->user_nik }}</h2>
-          <h2 class="mt-4">No Telepon : {{ $item->user->phone }}</h2>
+          <h2 class="mt-4">No Telepon : {{ $item->user->phone }}</h2> -->
           <h2 class="mt-4">Tanggal : {{ $ite->created_at->format('l, d F Y - H:i:s') }}</h2>
           <h2 class="mt-4">Status :
             @if($item->status =='Belum di Proses')
@@ -59,12 +59,24 @@ Dashboard
 
           <div class="text-center flex-1">
             <h1 class="mb-8 font-semibold">Tanggapan</h1>
-            <p class="text-gray-800 dark:text-gray-400">
+            {{-- <p class="text-gray-800 dark:text-gray-400">
 
               @if (empty($tangap->tanggapan))
               Belum ada tanggapan
               @else
               {{ $tangap->tanggapan}}
+              @endif
+            </p> --}}
+            <p class="text-gray-800 dark:text-gray-400">
+              @if ($item->tanggapan->isEmpty())
+              Belum ada tanggapan
+              @else
+              @foreach ($item->tanggapan as $t)
+              <div class="mb-4">
+                <p>{{ $t->tanggapan }}</p>
+                <small class="text-sm text-gray-500">{{ $t->created_at->format('d M Y H:i') }}</small>
+              </div>
+              @endforeach
               @endif
             </p>
           </div>

@@ -39,7 +39,6 @@ Data Pengaduan
                   <!-- Avatar with inset shadow -->
                   <div class="relative hidden mr-3  md:block">
                     <img class=" h-32 w-35 " src="{{ Storage::url($item->image) }}" alt="" loading="lazy" />
-                  </div>
                 </div>
               </td>
               <td class="px-4 py-3 text-sm">

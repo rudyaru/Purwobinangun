@@ -22,9 +22,29 @@ class DatabaseSeeder extends Seeder
             'nik' => '250404',
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
-            'phone' => '085335249308',
+            'phone' => '082137169851',
             'password' => Hash::make('admin'),
             'roles' => 'ADMIN',
         ]);
+
+        // akun warga
+        DB::table('users')->insert([
+            'nik' => '331816',
+            'name' => 'Warga A',
+            'email' => 'wargaa@gmail.com',
+            'phone' => '082234567890',
+            'password' => Hash::make('wargaa'),
+            'roles' => 'USER',
+        ]);
+
+        // // akun petugas
+        // DB::table('petugas')->insert([
+        //     'nama_petugas' => 'petugas1',
+        //     'username' => 'petugas1',
+        //     'email' => 'petugas1@gmail.com',
+        //     'telp' => '087545678832',
+        //     'password' => Hash::make('petugas1'),
+        //     'level' => 'admin',
+        // ]);
     }
 }

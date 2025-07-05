@@ -2,7 +2,8 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <img class="w-20 h-20 " src="{{ asset('img/logo.png')}} " alt="Logo">
+                <img class="" src="{{ asset('img/Logo.png')}} " alt="Logo" width="130" height="50">
+                {{-- class="w-20 h-20 " --}}
             </a>
         </x-slot>
 
@@ -16,7 +17,7 @@
             <div>
                 <x-label for="nik" :value="__('NIK')" />
 
-                <x-input id="nik" class="block mt-1 w-full" type="text" name="nik" :value="old('nik')" required autofocus />
+                <x-input id="nik" class="block mt-1 w-full" type="text" name="nik" :value="old('nik')" required autofocus minlength="16" maxlength="16" pattern="\d{16}" />
             </div>
 
             <!-- Name -->

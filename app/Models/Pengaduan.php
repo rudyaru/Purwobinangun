@@ -41,11 +41,15 @@ class Pengaduan extends Model
         return $this->belongsTo(Pengaduan::class, 'id', 'id');
     }
 
+    // public function tanggapan()
+    // {
+    //     return $this->hasOne(Tanggapan::class);
+    // }
+
     public function tanggapan()
     {
-        return $this->hasOne(Tanggapan::class);
+        return $this->hasMany(Tanggapan::class);
     }
-
     public function status()
     {
         return $this->belongsTo(Tanggapan::class, 'status_id','status');

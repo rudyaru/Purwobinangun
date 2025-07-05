@@ -271,6 +271,31 @@ body {
   #hero .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
+  .hero-img img {
+  max-height: 350px; /* Sebelumnya 100px */
+  width: 100%;
+  object-fit: cover;
+  border: none;
+  outline: none;
+  margin: 5;
+  padding: 5;
+  background-color: #00384E;
+} 
+
+@media (max-width: 768px) {
+  .hero-img img {
+    max-height: 150px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-img img {
+    max-height: 150px;
+    width: 100%;
+  }
+}
+
   @media (min-width: 1024px) {
     #hero {
       background-attachment: fixed;
